@@ -1,3 +1,30 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-export default function About(){return <><section className="inner-hero"><p className="eyebrow">A LITTLE ABOUT US</p><h1>Stories with<br/><em>something to say.</em></h1><p>ReelsbyTemi is a visual storytelling studio built around curiosity, craft and the belief that the smallest details can hold the biggest meaning.</p></section><section className="about-founder section-pad"><div className="about-founder-image"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=90" alt="Temporary editorial portrait representing founder portrait placement"/><span>TEMPORARY PORTRAIT · BASHIR OLAMIDE</span></div><div className="about-founder-copy"><p className="eyebrow">THE PERSON BEHIND REELSBYTEMI</p><h2>Bashir<br/><em>Olamide.</em></h2><p>Bashir Olamide is the face behind ReelsbyTemi. His perspective shapes a studio that values emotion, intention and the human details that make a story memorable.</p><p>From the first idea to the final frame, the aim is simple: create visual work that feels considered, honest and alive.</p></div></section><section className="inner-content"><h2>We look closer.</h2><p>We partner with people, brands and communities to shape ideas into thoughtful visual experiences. From the first conversation to the final frame, our process is collaborative, considered and rooted in the story.</p><p>Our home is Lagos. Our perspective is open to everywhere.</p><Link href="/contact" className="text-link">LET’S CREATE TOGETHER <ArrowUpRight size={15}/></Link></section></>}
+
+export default function About() {
+  return <>
+    <section className="inner-hero">
+      <p className="eyebrow">A LITTLE ABOUT US</p>
+      <h1>Stories with<br/><em>something to say.</em></h1>
+      <p>ReelsbyTemi is a visual storytelling studio built around curiosity, craft and the belief that the smallest details can hold the biggest meaning.</p>
+    </section>
+    <section className="about-founder section-pad">
+      <div className="about-founder-image">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=90" alt="Temporary editorial portrait placeholder; not a photograph of Bashir Olamide"/>
+        <span>PORTRAIT PLACEHOLDER · REPLACE WITH BASHIR’S APPROVED PHOTO</span>
+      </div>
+      <div className="about-founder-copy">
+        <p className="eyebrow">THE PERSON BEHIND REELSBYTEMI</p>
+        <h2>Bashir<br/><em>Olamide.</em></h2>
+        <p>Bashir Olamide is the face behind ReelsbyTemi. His perspective shapes a studio that values emotion, intention and the human details that make a story memorable.</p>
+        <p>From the first idea to the final frame, the aim is simple: create visual work that feels considered, honest and alive.</p>
+      </div>
+    </section>
+    <section className="inner-content">
+      <h2>We look closer.</h2>
+      <p>We partner with people, brands and communities to shape ideas into thoughtful visual experiences. From the first conversation to the final frame, our process is collaborative, considered and rooted in the story.</p>
+      <p>Our home is Lagos. Our perspective is open to everywhere.</p>
+      <Link href="/contact" className="text-link">LET’S CREATE TOGETHER <ArrowUpRight size={15}/></Link>
+    </section>
+  </>;
+}
