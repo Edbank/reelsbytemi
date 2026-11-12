@@ -1,12 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Copy, Check } from "lucide-react";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [notice, setNotice] = useState("");
 
-  async function submit(event: React.FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const message = [
