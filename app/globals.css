@@ -248,3 +248,25 @@
  .hero-progress{width:58px}
  .hero-bottom>a{font-size:7px}
 }
+
+
+/* Interactive homepage What We Do accordion */
+.services-heading .eyebrow{margin:0 0 24px}
+.services-hint{max-width:280px;margin:30px 0 0;color:var(--muted);font-size:11px;line-height:1.8}
+.service-accordion-item{grid-template-columns:30px minmax(0,1fr);gap:18px;padding:25px 0}
+.service-accordion-content{min-width:0}
+.service-accordion-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0;border:0;background:transparent;color:var(--fg);text-align:left;cursor:pointer}
+.service-accordion-trigger>span{font:400 clamp(17px,1.6vw,21px)/1.35 'DM Sans',Arial,sans-serif;transition:color .2s}
+.service-accordion-trigger svg{flex:0 0 auto;color:var(--gold);transition:transform .2s}
+.service-accordion-trigger:hover>span,.service-accordion-item.is-open .service-accordion-trigger>span{color:var(--gold)}
+.service-accordion-trigger:focus-visible{outline:1px solid var(--gold);outline-offset:7px}
+.service-accordion-item .service-intro{margin:8px 32px 0 0;font-size:11px;line-height:1.75;color:#aaa49a}
+.service-accordion-panel{padding:15px 32px 4px 0;animation:service-panel-in .25s ease both}
+.service-accordion-panel[hidden]{display:none}
+.service-accordion-panel>p{max-width:520px;margin:0 0 13px;color:#c6bfb4;font-size:12px;line-height:1.85}
+.service-deliverables{display:block;color:var(--gold);font-size:8px;line-height:1.8;letter-spacing:.12em;text-transform:uppercase}
+.service-enquire{display:inline-flex;align-items:center;gap:9px;margin-top:17px;color:var(--fg);font-size:8px;letter-spacing:.13em;border-bottom:1px solid var(--gold);padding-bottom:8px}
+.service-enquire:hover{color:var(--gold)}
+@keyframes service-panel-in{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.services-layout{grid-template-columns:1fr;gap:36px}.services-heading h2{font-size:clamp(58px,13vw,82px)}.services-hint{margin-top:20px}.service-accordion-item{padding:22px 0}.service-accordion-trigger>span{font-size:17px}.service-accordion-panel{padding-right:8px}}
+@media(prefers-reduced-motion:reduce){.service-accordion-panel{animation:none}}
