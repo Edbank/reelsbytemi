@@ -30,7 +30,7 @@ export default function Contact() {
       "Project type: " + String(form.get("type") || ""), "",
       String(form.get("message") || ""),
     ].join("\n");
-    const recipient = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim();
+    const recipient = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "reelsbytemi@gmail.com";
 
     if (recipient) {
       window.location.href = "mailto:" + recipient + "?subject=" +
@@ -70,7 +70,7 @@ export default function Contact() {
           <button type="button" className="copy-enquiry" onClick={copyDraft}><Copy size={14}/> {copied ? "COPIED" : "COPY ENQUIRY"}</button>
         </>}
       </div>}
-      <small className="contact-privacy-note">This form does not store or transmit your details. If a studio email is configured, it opens your email app; otherwise, you can copy the prepared enquiry.</small>
+      <p className="contact-privacy-note">Your enquiry opens in your email app, addressed to <a href="mailto:reelsbytemi@gmail.com">reelsbytemi@gmail.com</a>. This form does not store or transmit your details.</p>
     </section>
   </>;
 }
