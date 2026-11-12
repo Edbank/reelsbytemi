@@ -114,3 +114,30 @@
  .about-founder-image{height:520px}
  .gallery-intro{font-size:7px}
 }
+
+
+/* Individual visual study pages */
+.study-hero{min-height:720px;position:relative;display:flex;align-items:end;overflow:hidden;padding:150px 10vw 82px;background:#080807}
+.study-hero-image{position:absolute;inset:0;background-size:cover;background-position:center 38%;opacity:.8;transform:scale(1.015)}
+.study-hero-content{position:relative;z-index:1;max-width:900px}
+.study-back{display:inline-flex;align-items:center;gap:10px;color:#eee9df;font-size:8px;letter-spacing:.16em;margin-bottom:70px}
+.study-hero h1{font:400 clamp(62px,10vw,130px)/.94 'Playfair Display',Georgia,serif;letter-spacing:-.06em;margin:24px 0}
+.study-hero h1 em,.study-copy-grid h2 em,.study-next h2 em{color:var(--gold);font-weight:400}
+.study-hero-content>p:not(.eyebrow){max-width:560px;color:#e0d8cb;font:400 clamp(16px,2vw,21px)/1.6 'Playfair Display',Georgia,serif}
+.study-category{display:inline-block;margin-top:20px;color:#d4c3a9;font-size:8px;letter-spacing:.17em}
+.study-body-kicker{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:8px;letter-spacing:.16em}
+.study-copy-grid{display:grid;grid-template-columns:1fr 1fr;gap:9vw;padding:75px 0}
+.study-copy-grid h2,.study-next h2{font:400 clamp(52px,7vw,90px)/.98 'Playfair Display',Georgia,serif;letter-spacing:-.06em;margin:0}
+.study-copy-grid>div>p:not(.eyebrow){max-width:500px;color:#aaa49a;font-size:13px;line-height:1.9}
+.study-approach-label{margin-top:32px}
+.study-frame-list{border-top:1px solid var(--line)}
+.study-frame-list>div{display:grid;grid-template-columns:50px 1fr 20px;align-items:center;gap:20px;padding:25px 0;border-bottom:1px solid var(--line)}
+.study-frame-list span{color:var(--gold);font-size:9px}
+.study-frame-list strong{font:400 24px 'Playfair Display',Georgia,serif}
+.study-frame-list svg{color:var(--gold)}
+.study-disclaimer{margin-top:26px;color:var(--muted);font-size:9px;line-height:1.7}
+.study-next{display:flex;align-items:end;justify-content:space-between;padding-top:130px}
+.study-next h2{margin-top:25px}
+.portfolio-card{color:inherit;text-decoration:none;display:block}
+[data-theme="light"] .study-hero{background:#15120e}
+@media(max-width:760px){.study-hero{min-height:660px;padding:130px 7vw 65px}.study-back{margin-bottom:55px}.study-copy-grid{grid-template-columns:1fr;gap:35px;padding:50px 0}.study-frame-list strong{font-size:20px}.study-next{padding-top:90px;align-items:start;flex-direction:column;gap:25px}}
