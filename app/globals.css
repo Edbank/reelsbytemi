@@ -190,3 +190,24 @@
 .contact-privacy-note{display:block;max-width:680px;margin-top:22px;color:var(--muted);line-height:1.8}
 .contact-form button{display:inline-flex;align-items:center;gap:10px}
 @media(max-width:760px){.form-result{padding:16px}.enquiry-draft{font-size:11px}}
+
+/* Portfolio card containment and deliberate separation between sections */
+.portfolio-grid{align-items:start;row-gap:76px}
+.portfolio-card{display:block;min-width:0;max-width:100%;overflow:hidden}
+.portfolio-card:nth-child(odd){transform:none}
+.portfolio-image{width:100%;max-width:100%}
+.portfolio-image img{display:block;width:100%;height:100%;object-fit:cover}
+.portfolio-meta{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:18px 24px;width:100%;min-width:0;padding-top:20px}
+.portfolio-meta>div{min-width:0;max-width:100%}
+.portfolio-meta>div>span{display:block;overflow-wrap:anywhere}
+.portfolio-meta h2{max-width:100%;overflow-wrap:anywhere}
+.portfolio-meta p{max-width:100%;overflow-wrap:anywhere;word-break:normal}
+.portfolio-year{max-width:110px;text-align:right;white-space:normal;line-height:1.6}
+.portfolio-gallery>.media-note{display:block;clear:both;width:100%;max-width:760px;margin:58px 0 0;padding-top:22px;border-top:1px solid var(--line);line-height:1.9;overflow-wrap:anywhere}
+.portfolio-gallery>.gallery-cta{margin-top:12px}
+@media(max-width:760px){
+ .portfolio-grid{grid-template-columns:minmax(0,1fr);row-gap:48px}
+ .portfolio-meta{grid-template-columns:minmax(0,1fr);gap:8px}
+ .portfolio-year{text-align:left;max-width:none}
+ .portfolio-gallery>.media-note{margin-top:42px;padding-top:18px}
+}
