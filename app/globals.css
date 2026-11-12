@@ -311,3 +311,10 @@
  .project-card,.portfolio-card,.client-collab-card{transform:none!important}
  .project-card img,.portfolio-image img,.client-collab-image img{transition:none!important}
 }
+
+
+/* Re-run motion on client-side route changes and give project imagery its own reveal */
+.portfolio-image{clip-path:inset(0 0 100% 0);transition:clip-path 1.05s cubic-bezier(.2,.7,.2,1)}
+.portfolio-card.motion-in .portfolio-image{clip-path:inset(0 0 0 0)}
+@keyframes hero-image-arrive{from{opacity:.35;transform:translate3d(0,var(--hero-parallax-y,0px),0) scale(1.08)}to{opacity:1;transform:translate3d(0,var(--hero-parallax-y,0px),0) scale(1.025)}}
+@media(prefers-reduced-motion:reduce){.portfolio-image{clip-path:none!important;transition:none!important}}
