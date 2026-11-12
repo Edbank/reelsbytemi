@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, Menu, X, Sun, Moon } from "lucide-react";
+import { ArrowUpRight, Menu, X, Sun, Moon, Instagram } from "lucide-react";
 
 const links = [
   { href: "/work", label: "Work" },
@@ -102,7 +102,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} REELSBYTEMI</span>
           <span>LAGOS, NIGERIA · AVAILABLE WORLDWIDE</span>
-          <span>VISUAL STORIES, THOUGHTFULLY TOLD.</span>
+          <a href="https://www.instagram.com/reelsby_temi/" target="_blank" rel="noreferrer" aria-label="ReelsbyTemi on Instagram"><Instagram size={12}/> INSTAGRAM</a><span>VISUAL STORIES, THOUGHTFULLY TOLD.</span>
         </div>
       </footer>
       {open && (
