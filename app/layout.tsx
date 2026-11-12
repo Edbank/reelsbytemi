@@ -1,5 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SiteShell } from "@/components/site-shell";
-export const metadata: Metadata = { title: "ReelsbyTemi — Visual stories, thoughtfully told.", description: "A Lagos-based visual storytelling and film production studio creating thoughtful films, imagery and brand experiences.", metadataBase: new URL("https://reelsbytemi.com"), openGraph: { title: "ReelsbyTemi", description: "Visual stories, thoughtfully told.", type: "website" } };
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en"><body><SiteShell>{children}</SiteShell></body></html>; }
+
+export const metadata: Metadata = {
+  title: { default: "ReelsbyTemi — Visual stories, thoughtfully told.", template: "%s — ReelsbyTemi" },
+  description: "ReelsbyTemi is a visual storytelling studio in Lagos, Nigeria, creating thoughtful films, photography and brand experiences.",
+  openGraph: {
+    title: "ReelsbyTemi — Visual stories, thoughtfully told.",
+    description: "Thoughtful films and visual experiences for people, places and ideas worth remembering.",
+    type: "website",
+  },
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body><SiteShell>{children}</SiteShell></body></html>;
+}
