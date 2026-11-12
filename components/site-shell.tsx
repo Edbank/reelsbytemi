@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X, Sun, Moon, Instagram } from "lucide-react";
+import { MotionLayer } from "@/components/motion-layer";
 
 const links = [
   { href: "/work", label: "Work" },
@@ -71,6 +72,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to content</a>
+      <MotionLayer />
       <header className="site-header">
         <Link href="/" className="brand" aria-label="ReelsbyTemi home">
           <img src="/rt-monogram.svg" alt="" />
