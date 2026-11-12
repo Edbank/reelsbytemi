@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function MotionLayer() {
+  const pathname = usePathname();
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const revealTargets = [
@@ -107,7 +109,7 @@ export function MotionLayer() {
       if (frame) window.cancelAnimationFrame(frame);
       cleanups.forEach((cleanup) => cleanup());
     };
-  }, []);
+  }, [pathname]);
 
   return <div className="scroll-progress" aria-hidden="true"><span className="scroll-progress-fill" /></div>;
 }
