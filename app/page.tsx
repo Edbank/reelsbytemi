@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HomeHero } from "@/components/home-hero";
+import { ArrowUpRight } from "lucide-react";
 const services=[["01","Film & video production","From concept to final cut, stories shaped with intention."],["02","Brand films & campaigns","Distinctive visual worlds for brands with something to say."],["03","Event films","The energy, the details, the moments worth keeping."],["04","Photography","Still frames with feeling, character and clarity."]];
 const projects=[
  {n:"01",title:"The New Lagos",type:"CITY / CULTURE FILM",image:"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85",slug:"the-new-lagos",className:"project-tall"},
