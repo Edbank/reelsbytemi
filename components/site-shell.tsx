@@ -8,7 +8,7 @@ const links = [
   { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/clients", label: "Clients" },
+  { href: "/clients", label: "Collaborate" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -93,7 +93,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           {open ? <X/> : <Menu/>}
         </button>
       </header>
-      <main id="main-content" tabIndex={-1}>{children}</main>
+      <main id="main-content" tabIndex={-1} aria-label="Page content">{children}</main>
       <footer className="footer">
         <div className="footer-top">
           <div><p className="eyebrow">HAVE A STORY TO TELL?</p><h2>Let’s make<br/><em>something lasting.</em></h2></div>
@@ -106,7 +106,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
       {open && (
-        <div className="mobile-menu" id="mobile-navigation">
+        <nav className="mobile-menu" id="mobile-navigation" aria-label="Mobile navigation">
           <p className="eyebrow">EXPLORE REELSBYTEMI</p>
           {links.map((link, index) => (
             <Link onClick={() => setOpen(false)} key={link.href} href={link.href} aria-current={pathname === link.href ? "page" : undefined}>
@@ -114,7 +114,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </Link>
           ))}
           <button className="mobile-theme" onClick={toggleTheme}>{theme === "dark" ? <Sun size={16}/> : <Moon size={16}/>} Switch to {theme === "dark" ? "light" : "dark"} theme</button>
-        </div>
+        </nav>
       )}
     </>
   );
