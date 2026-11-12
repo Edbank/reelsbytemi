@@ -19,7 +19,7 @@ export function HomeHero() {
       <div className="hero-meta"><span>INDEPENDENT CREATIVE PRODUCTION</span><span>LAGOS, NG · AVAILABLE WORLDWIDE</span></div>
       <div className="hero-center">
         <p className="eyebrow">FILM · CREATE · INSPIRE</p>
-        <h1>Stories live<br/>in the <em>details.</em></h1>
+        <h1><span>Stories live</span><span>in the <em>details.</em></span></h1>
         <p className="hero-copy">ReelsbyTemi is a creative production studio<br/>that turns ideas into powerful visual stories.</p>
         <div className="hero-actions">
           <Link href="/work" className="hero-primary-link">Explore Our Work <ArrowRight size={18}/></Link>
